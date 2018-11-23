@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>欢迎来到 <%= title %></p>
+    <form action="/users/login" method="post">
+        <input type="text" placeholder="姓名" id="log_name" name="log_name" />
+        <input type="text" placeholder="昵称" id="log_nickname" name="log_nickname" />
+        <input type="password" placeholder="密码" id="log_pwd" name="log_pwd" />
+        <input type="submit" id="log_submit" name="提交" />
+    </form>
+  </body>
+</html>
