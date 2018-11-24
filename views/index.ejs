@@ -9,7 +9,12 @@
     <p>欢迎来到 <%= title %></p>
     <!-- <button onclick="location.href='/register'">登陆</button>
     <button>注册</button> -->
-    <input type="button" id="login" value="登陆" onclick="location.href='/login'" />
-    <input type="button" id="register" value="注册" onclick="location.href='/register'" />
+    <% if (username) {%>
+      <input type="button" id="logout" value="注销" onclick="location.href='/logout'" />
+      <input type="button" id="comment" value="评论" onclick="location.href='/comment'" />
+    <% } else {%>
+      <input type="button" id="login" value="登陆" onclick="location.href='/login'" />
+      <input type="button" id="register" value="注册" onclick="location.href='/register'" />
+    <% }%>
   </body>
 </html>

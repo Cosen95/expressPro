@@ -67,6 +67,7 @@ router.post('/login', function(req,res,next) {
       findData(db,function(result) {
         console.log('登陆数据~~',result);
         if (result.length > 0) {
+          req.session.username = result[0].username;
           res.redirect('/');
         } else {
           res.send('登陆失败');
