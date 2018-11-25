@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>欢迎来到 <%= title %></p>
+    <table>
+      <thead>
+        <th>序号</th>
+        <th>标题</th>
+        <th>内容</th>
+      </thead>
+      <tbody>
+        <% list.forEach(function(item,index){%>
+          <tr>
+            <td><%- index %></td>
+            <td><a href=""><%- item.title %></a></td>
+            <td><%- item.content %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
