@@ -7,10 +7,12 @@
   <body>
     <h1><%= title %></h1>
     <p>欢迎来到 <%= title %></p>
-    <form action="" method="post">
-      标题: <input type="text" placeholder="输入标题" name="title" style="width:400px;margin-top:10px" />
+    <form action="/comment/save" method="post">
+      标题: <input type="text" placeholder="输入标题" name="comment_title" style="width:400px;margin-top:10px" />
       <br /><br />
-      内容: <textarea name="content" placeholder="输入内容" cols="100" rows="20"></textarea>
+      内容: <textarea name="comment_content" placeholder="输入内容" cols="100" rows="20"></textarea>
+      <br /><br />
+      <input type="submit" value="发布" />
     </form>
   </body>
 </html>
