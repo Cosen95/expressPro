@@ -90,4 +90,20 @@ router.get('/list',function(req,res) {
   })
 })
 
+router.get('/detail',function(req,res) {
+  // res.send('列表页');
+  var uid = parseInt(req.query.uid);
+  MongoClient.connect(DB_CONNECT_STR,function(err,db) {
+    var conn = db.collection('comments');
+    conn.find({uid:uid}).toArray(function(err,result) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('详情页信息',result);
+        res.render('detail',{ title:'详情页',mes:result });
+      }
+    })
+  })
+})
+
 module.exports = router;

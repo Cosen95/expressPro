@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>欢迎来到 <%= title %></p>
+    <% mes.forEach(function(item,index){%>
+      <p><span>用户名：</span><span><%- item.username%></span></p>
+      <p><span>标题：</span><span><%- item.title%></span></p>
+      <p><span>内容：</span><span><%- item.content%></span></p>
+    <% }) %>
+  </body>
+</html>

@@ -17,7 +17,7 @@
         <% list.forEach(function(item,index){%>
           <tr>
             <td><%- index %></td>
-            <td><a href=""><%- item.title %></a></td>
+            <td><a href="./detail?uid=<%- item.uid %>"><%- item.title %></a></td>
             <td><%- item.content %></td>
           </tr>
         <% }) %>
